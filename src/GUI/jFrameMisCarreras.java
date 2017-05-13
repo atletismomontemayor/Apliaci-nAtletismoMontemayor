@@ -9,15 +9,15 @@ package GUI;
  *
  * @author Jesús
  */
-public class MisCarreras extends javax.swing.JFrame {
+public class jFrameMisCarreras extends javax.swing.JFrame {
 
     /**
      * Creates new form MisCarreras
      */
-    public MisCarreras() {
+    public jFrameMisCarreras() {
         this.add(barra);
         initComponents();
-        MiMenuBar menu = new MiMenuBar(this);
+        C_MiMenuBar menu = new C_MiMenuBar(this);
         this.setJMenuBar(menu.getBarraMenu());
     }
 
@@ -160,5 +160,5 @@ public class MisCarreras extends javax.swing.JFrame {
     /**
      * 
      */
-    MiMenuBar barra = new MiMenuBar(this);
+    C_MiMenuBar barra = new C_MiMenuBar(this);
 }

@@ -14,21 +14,21 @@ import javax.swing.JTable;
  *
  * @author Jesús
  */
-public class Corredores extends javax.swing.JFrame {
+public class jFrameCorredores extends javax.swing.JFrame {
     private C_SQL controladorSQL;
     /**
      * Creates new form Corredores
      */
-    public Corredores() {
+    public jFrameCorredores() {
         this.add(barra);
         initComponents();
-        MiMenuBar menu = new MiMenuBar(this);
+        C_MiMenuBar menu = new C_MiMenuBar(this);
         this.setJMenuBar(menu.getBarraMenu());
         try {
             controladorSQL= new C_SQL(this);
             controladorSQL.mostrarCorredores();
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Corredores.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(jFrameCorredores.class.getName()).log(Level.SEVERE, null, ex);
         }
        
     }
@@ -127,7 +127,7 @@ public class Corredores extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTableCorredores;
     // End of variables declaration//GEN-END:variables
-    MiMenuBar barra = new MiMenuBar(this);
+    C_MiMenuBar barra = new C_MiMenuBar(this);
 /**
  * 
  * @return 

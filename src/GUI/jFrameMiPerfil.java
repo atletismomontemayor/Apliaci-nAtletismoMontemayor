@@ -15,23 +15,23 @@ import javax.swing.JTextField;
  *
  * @author Jesús
  */
-public class MiPerfil extends javax.swing.JFrame {
+public class jFrameMiPerfil extends javax.swing.JFrame {
     Modelo.ConexionSQL con = new ConexionSQL();
     Connection cn = con.conectar();
     /**
      * Creates new form MiPerfil
      */
 
-    public MiPerfil() {
+    public jFrameMiPerfil() {
         this.add(barra);
         initComponents();
-        MiMenuBar menu = new MiMenuBar(this);
+        C_MiMenuBar menu = new C_MiMenuBar(this);
         this.setJMenuBar(menu.getBarraMenu());
         C_SQL controladorSQL;
         try {
             controladorSQL = new C_SQL(this);
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(MiPerfil.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(jFrameMiPerfil.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         
@@ -180,7 +180,7 @@ public class MiPerfil extends javax.swing.JFrame {
     * 
     */
     
-    MiMenuBar barra = new MiMenuBar(this);
+    C_MiMenuBar barra = new C_MiMenuBar(this);
 /**
  * 
  * @return 

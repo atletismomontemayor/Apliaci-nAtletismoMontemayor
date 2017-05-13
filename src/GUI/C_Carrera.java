@@ -5,7 +5,7 @@ import java.sql.*;
 
 public class C_Carrera {
     
-    private Carreras ventanaCarreras;
+    private jFrameCarreras ventanaCarreras;
     private int CodigoCarrera;
     private String Nombre;
     private String Localidad;

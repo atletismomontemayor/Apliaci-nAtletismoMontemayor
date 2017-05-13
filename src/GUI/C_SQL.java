@@ -21,12 +21,12 @@ public class C_SQL {
 
     private PreparedStatement pst;
     private Connection con;
-    private static Principal miPrincipal;
-    private Sesion_Iniciada miSesion;
-    private Carreras ventanaCarreras;
-    private Corredores ventanaCorredores;
-    private Registrar ventanaRegistrar;
-    private MiPerfil ventanaPerfil;
+    private static jFramePrincipal miPrincipal;
+    private jFrameSesion_Iniciada miSesion;
+    private jFrameCarreras ventanaCarreras;
+    private jFrameCorredores ventanaCorredores;
+    private jFrameRegistrar ventanaRegistrar;
+    private jFrameMiPerfil ventanaPerfil;
 
     /**
      *
@@ -34,7 +34,7 @@ public class C_SQL {
      * @throws ClassNotFoundException
      */
 
-    public C_SQL(Principal p) throws ClassNotFoundException {
+    public C_SQL(jFramePrincipal p) throws ClassNotFoundException {
         try {
             this.con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/atletismo", "root", "");
             miPrincipal = p;
@@ -48,7 +48,7 @@ public class C_SQL {
      * @param c
      * @throws ClassNotFoundException
      */
-    public C_SQL(Carreras c) throws ClassNotFoundException {
+    public C_SQL(jFrameCarreras c) throws ClassNotFoundException {
         try {
             this.con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/atletismo", "root", "");
             ventanaCarreras = c;
@@ -62,7 +62,7 @@ public class C_SQL {
      * @param mp
      * @throws ClassNotFoundException
      */
-    public C_SQL(MiPerfil mp) throws ClassNotFoundException {
+    public C_SQL(jFrameMiPerfil mp) throws ClassNotFoundException {
         try {
             this.con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/atletismo", "root", "");
             ventanaPerfil = mp;
@@ -76,7 +76,7 @@ public class C_SQL {
      * @param co
      * @throws ClassNotFoundException
      */
-    public C_SQL(Corredores co) throws ClassNotFoundException {
+    public C_SQL(jFrameCorredores co) throws ClassNotFoundException {
         try {
             this.con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/atletismo", "root", "");
             ventanaCorredores = co;
@@ -90,7 +90,7 @@ public class C_SQL {
      * @param re
      * @throws ClassNotFoundException
      */
-    public C_SQL(Registrar re) throws ClassNotFoundException {
+    public C_SQL(jFrameRegistrar re) throws ClassNotFoundException {
         try {
             this.con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/atletismo", "root", "");
             ventanaRegistrar = re;
@@ -123,7 +123,7 @@ public class C_SQL {
 
                 miPrincipal.setVisible(false);
                 JOptionPane.showMessageDialog(null, "Bienvenido administrador");
-                 VentanaAdmin ingreso = new VentanaAdmin();
+                 jFrameVentanaAdmin ingreso = new jFrameVentanaAdmin();
                 
                  ingreso.setVisible(true);
                  ingreso.pack();
@@ -135,7 +135,7 @@ public class C_SQL {
             if (cap.equals("0")) {
                 miPrincipal.setVisible(false);
                 JOptionPane.showMessageDialog(miPrincipal, "Bienvenido");
-                Sesion_Iniciada perfil = new Sesion_Iniciada();
+                jFrameSesion_Iniciada perfil = new jFrameSesion_Iniciada();
                 perfil.setVisible(true);
                 perfil.pack();
                 miPrincipal.dispose();
@@ -241,7 +241,7 @@ public class C_SQL {
 
         if (!ventanaRegistrar.getjTextFieldNombre().getText().equals("") && !ventanaRegistrar.getjTextFieldApellido().getText().equals("") && !ventanaRegistrar.getjTextFieldNomUser().getText().equals("")
                 && !ventanaRegistrar.getjPasswordFieldPass().getText().equals("")) {
-            Principal obj = new Principal();
+            jFramePrincipal obj = new jFramePrincipal();
             obj.setVisible(true);
             ventanaRegistrar.dispose();
             Modelo.respositorio miRepo = new respositorio();

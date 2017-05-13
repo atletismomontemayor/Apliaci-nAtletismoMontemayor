@@ -13,7 +13,7 @@ import javax.swing.JMenuBar;
  *
  * @author Jesús
  */
-public class MiMenuBar extends JMenuBar {
+public class C_MiMenuBar extends JMenuBar {
 
     //Componentes
     private JFrame ventanaPadre;
@@ -29,7 +29,7 @@ public class MiMenuBar extends JMenuBar {
      * 
      * @param ventana 
      */
-    public MiMenuBar(JFrame ventana) {
+    public C_MiMenuBar(JFrame ventana) {
         this.ventanaPadre = ventana;
         inicializar();
     }
@@ -89,7 +89,7 @@ public class MiMenuBar extends JMenuBar {
      * @param evt 
      */
     private void jMenuPerfilMouseClicked(java.awt.event.MouseEvent evt) {
-        MiPerfil obj = new MiPerfil();
+        jFrameMiPerfil obj = new jFrameMiPerfil();
         //ventanaPadre.setVisible(false);
         obj.setVisible(true);
         ventanaPadre.dispose();
@@ -100,7 +100,7 @@ public class MiMenuBar extends JMenuBar {
  * @param evt 
  */
     private void jMenuMCarreraMouseClicked(java.awt.event.MouseEvent evt) {
-        MisCarreras obj = new MisCarreras();
+        jFrameMisCarreras obj = new jFrameMisCarreras();
         //ventanaPadre.setVisible(false);
         obj.setVisible(true);
         ventanaPadre.dispose();
@@ -110,7 +110,7 @@ public class MiMenuBar extends JMenuBar {
  * @param evt 
  */
     private void jMenuCarrerasMouseClicked(java.awt.event.MouseEvent evt) {
-        Carreras obj = new Carreras();
+        jFrameCarreras obj = new jFrameCarreras();
         //ventanaPadre.setVisible(false);
         obj.setVisible(true);
         ventanaPadre.dispose();
@@ -120,7 +120,7 @@ public class MiMenuBar extends JMenuBar {
  * @param evt 
  */
     private void jMenuCorredoresMouseClicked(java.awt.event.MouseEvent evt) {
-        Corredores obj = new Corredores();
+        jFrameCorredores obj = new jFrameCorredores();
         //ventanaPadre.setVisible(false);
         obj.setVisible(true);
         ventanaPadre.dispose();
@@ -130,7 +130,7 @@ public class MiMenuBar extends JMenuBar {
  * @param evt 
  */
     private void jMenuCerrarSesionMouseClicked(java.awt.event.MouseEvent evt) {
-        Principal obj = new Principal();
+        jFramePrincipal obj = new jFramePrincipal();
         obj.setVisible(true);
         ventanaPadre.dispose();
     }

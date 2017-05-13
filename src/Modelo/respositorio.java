@@ -7,8 +7,8 @@ import javax.swing.JOptionPane;
 public class respositorio {
 
     private C_SQL controladorSQL;
-    private Registrar ventanaRegistrar;
-    private MiPerfil ventanaPerfil;
+    private jFrameRegistrar ventanaRegistrar;
+    private jFrameMiPerfil ventanaPerfil;
     private ResultSet resultado;
 
     public void SolicitarUsuario() {
@@ -88,5 +88,6 @@ public class respositorio {
             System.out.println(ex);
         }
     }
+
 }
 
