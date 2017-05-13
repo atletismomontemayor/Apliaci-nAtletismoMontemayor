@@ -168,5 +168,4 @@ public class jFrameVentanaAdmin extends javax.swing.JFrame {
         return jLabelUsu;
     }
 
-
 }

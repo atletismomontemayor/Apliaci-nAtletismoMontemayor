@@ -5,9 +5,10 @@
  */
 package GUI;
 
-
+import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 
 /**
@@ -67,9 +68,16 @@ public class jFrameCarreras extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTableInscripcion.setColumnSelectionAllowed(false);
+        jTableInscripcion.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
         jScrollPane1.setViewportView(jTableInscripcion);
 
         jButtonParticipar.setText("Participar");
+        jButtonParticipar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonParticiparActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -98,6 +106,14 @@ public class jFrameCarreras extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButtonParticiparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonParticiparActionPerformed
+          if(jTableInscripcion.getSelectedRow() < 0)
+            JOptionPane.showMessageDialog(this, "No hay ninguna fila seleccionada", "Error", JOptionPane.ERROR_MESSAGE);
+        else{
+              JOptionPane.showConfirmDialog(this, "¿Participarás en la carrera seleccionada?");
+        }
+    }//GEN-LAST:event_jButtonParticiparActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -108,10 +124,11 @@ public class jFrameCarreras extends javax.swing.JFrame {
     private javax.swing.JTable jTableInscripcion;
     // End of variables declaration//GEN-END:variables
    C_MiMenuBar barra = new C_MiMenuBar(this);
-/**
- * 
- * @return 
- */
+
+    /**
+     *
+     * @return
+     */
     public JTable getjTableInscripcion() {
         return jTableInscripcion;
     }

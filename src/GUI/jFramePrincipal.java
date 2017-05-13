@@ -11,7 +11,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JButton;
 
-
 /**
  *
  * @author Jesús
@@ -127,14 +126,14 @@ public class jFramePrincipal extends javax.swing.JFrame {
         });
         getContentPane().add(jButtonCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 0, 20, 20));
 
-        jButtonMinimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/minimizar.png"))); // NOI18N
+        jButtonMinimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/minimize-icon-7.png"))); // NOI18N
         jButtonMinimizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonMinimizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonMinimizarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 0, 40, 20));
+        getContentPane().add(jButtonMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 0, 30, 20));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/key.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 80, -1, -1));
@@ -150,20 +149,20 @@ public class jFramePrincipal extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jTextFieldUserActionPerformed
 
-        public void transparenciaBoton(){
+    public void transparenciaBoton() {
         jButtonCerrar.setOpaque(false);
         jButtonCerrar.setContentAreaFilled(false);
         jButtonCerrar.setBorderPainted(false);
         jButtonMinimizar.setOpaque(false);
         jButtonMinimizar.setContentAreaFilled(false);
         jButtonMinimizar.setBorderPainted(false);
-        
+
     }
     private void jButtonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAceptarActionPerformed
         String usu = jTextFieldUser.getText();
         String pass = new String(jPasswordFieldPass.getPassword());
         miControladorSQL.comprobarUsuario(usu, pass);
-        
+
     }//GEN-LAST:event_jButtonAceptarActionPerformed
 
     private void jButtonRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarActionPerformed
@@ -237,7 +236,7 @@ public class jFramePrincipal extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldUser;
     // End of variables declaration//GEN-END:variables
     /**
-     * 
+     *
      */
     ConexionSQL cc = new ConexionSQL();
     Connection con = cc.conectar();

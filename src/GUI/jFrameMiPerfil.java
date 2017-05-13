@@ -16,8 +16,10 @@ import javax.swing.JTextField;
  * @author Jesús
  */
 public class jFrameMiPerfil extends javax.swing.JFrame {
+
     Modelo.ConexionSQL con = new ConexionSQL();
     Connection cn = con.conectar();
+
     /**
      * Creates new form MiPerfil
      */
@@ -34,8 +36,6 @@ public class jFrameMiPerfil extends javax.swing.JFrame {
             Logger.getLogger(jFrameMiPerfil.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        
-        
     }
 
     /**
@@ -177,45 +177,49 @@ public class jFrameMiPerfil extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldUsuario;
     // End of variables declaration//GEN-END:variables
    /**
-    * 
-    */
-    
+     *
+     */
+
     C_MiMenuBar barra = new C_MiMenuBar(this);
-/**
- * 
- * @return 
- */
+
+    /**
+     *
+     * @return
+     */
     public JTextField getjTextFieldApellidos() {
         return jTextFieldApellidos;
     }
-/**
- * 
- * @return 
- */
+
+    /**
+     *
+     * @return
+     */
     public JTextField getjTextFieldCarrerasRealizadas() {
         return jTextFieldCarrerasRealizadas;
     }
-/**
- * 
- * @return 
- */
+
+    /**
+     *
+     * @return
+     */
     public JTextField getjTextFieldCategoria() {
         return jTextFieldCategoria;
     }
-/**
- * 
- * @return 
- */
+
+    /**
+     *
+     * @return
+     */
     public JTextField getjTextFieldNombre() {
         return jTextFieldNombre;
     }
-/**
- * 
- * @return 
- */
+
+    /**
+     *
+     * @return
+     */
     public JTextField getjTextFieldUsuario() {
         return jTextFieldUsuario;
     }
 
-    
 }

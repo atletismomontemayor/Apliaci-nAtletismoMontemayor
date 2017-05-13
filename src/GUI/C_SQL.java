@@ -33,7 +33,6 @@ public class C_SQL {
      * @param p
      * @throws ClassNotFoundException
      */
-
     public C_SQL(jFramePrincipal p) throws ClassNotFoundException {
         try {
             this.con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/atletismo", "root", "");
@@ -110,7 +109,7 @@ public class C_SQL {
      */
     public boolean comprobarUsuario(String usuario, String pwd) {
         boolean success = false;
-        respositorio mirepo= new respositorio();
+        respositorio mirepo = new respositorio();
         String cap = "";
         String sql = "SELECT * FROM persona WHERE nombreusuario='" + usuario + "' && contrasenya='" + pwd + "'";
         try {
@@ -123,13 +122,12 @@ public class C_SQL {
 
                 miPrincipal.setVisible(false);
                 JOptionPane.showMessageDialog(null, "Bienvenido administrador");
-                 jFrameVentanaAdmin ingreso = new jFrameVentanaAdmin();
-                
-                 ingreso.setVisible(true);
-                 ingreso.pack();
-                ingreso.getjLabelUsu().setText(usuario); 
+                jFrameVentanaAdmin ingreso = new jFrameVentanaAdmin();
+
+                ingreso.setVisible(true);
+                ingreso.pack();
+                ingreso.getjLabelUsu().setText(usuario);
                 miPrincipal.dispose();
-                
 
             }
             if (cap.equals("0")) {
@@ -185,7 +183,6 @@ public class C_SQL {
             dtm.addColumn("Distancia");
             for (int i = 0; i < data.size(); i++) {
                 dtm.addRow(data.get(i));
-
             }
             ventanaCarreras.getjTableInscripcion().setModel(dtm);
         } catch (ClassNotFoundException | SQLException e) {

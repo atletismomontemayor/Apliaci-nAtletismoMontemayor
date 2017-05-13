@@ -44,7 +44,7 @@ public class jFrameSesion_Iniciada extends javax.swing.JFrame {
         setTitle("Sesion Iniciada");
         setMaximumSize(new java.awt.Dimension(402, 298));
         setMinimumSize(new java.awt.Dimension(402, 298));
-        setPreferredSize(new java.awt.Dimension(402, 298));
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelUsu.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -182,9 +182,9 @@ public class jFrameSesion_Iniciada extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelUsu;
     // End of variables declaration//GEN-END:variables
 /**
- * 
- * @return 
- */
+     *
+     * @return
+     */
     public JLabel getjLabelUsu() {
         return jLabelUsu;
     }

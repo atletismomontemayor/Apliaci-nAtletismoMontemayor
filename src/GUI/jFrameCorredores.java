@@ -5,7 +5,6 @@
  */
 package GUI;
 
-
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JTable;
@@ -15,7 +14,9 @@ import javax.swing.JTable;
  * @author Jesús
  */
 public class jFrameCorredores extends javax.swing.JFrame {
+
     private C_SQL controladorSQL;
+
     /**
      * Creates new form Corredores
      */
@@ -25,12 +26,12 @@ public class jFrameCorredores extends javax.swing.JFrame {
         C_MiMenuBar menu = new C_MiMenuBar(this);
         this.setJMenuBar(menu.getBarraMenu());
         try {
-            controladorSQL= new C_SQL(this);
+            controladorSQL = new C_SQL(this);
             controladorSQL.mostrarCorredores();
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(jFrameCorredores.class.getName()).log(Level.SEVERE, null, ex);
         }
-       
+
     }
 
     /**
@@ -114,7 +115,7 @@ public class jFrameCorredores extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -128,12 +129,13 @@ public class jFrameCorredores extends javax.swing.JFrame {
     private javax.swing.JTable jTableCorredores;
     // End of variables declaration//GEN-END:variables
     C_MiMenuBar barra = new C_MiMenuBar(this);
-/**
- * 
- * @return 
- */
+
+    /**
+     *
+     * @return
+     */
     public JTable getjTableCorredores() {
         return jTableCorredores;
     }
-    
+
 }

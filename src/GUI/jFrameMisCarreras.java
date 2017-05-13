@@ -158,7 +158,7 @@ public class jFrameMisCarreras extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldTiempo;
     // End of variables declaration//GEN-END:variables
     /**
-     * 
+     *
      */
     C_MiMenuBar barra = new C_MiMenuBar(this);
 }
