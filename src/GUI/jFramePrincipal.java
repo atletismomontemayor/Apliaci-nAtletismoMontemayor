@@ -6,6 +6,8 @@
 package GUI;
 
 import Modelo.ConexionSQL;
+import java.awt.Desktop;
+import java.net.URI;
 import java.sql.Connection;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -32,7 +34,6 @@ public class jFramePrincipal extends javax.swing.JFrame {
         }
         this.setSize(760, 480);
         this.setResizable(false);
-
     }
 
     /**
@@ -55,6 +56,7 @@ public class jFramePrincipal extends javax.swing.JFrame {
         jButtonCerrar = new javax.swing.JButton();
         jButtonMinimizar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabelPagina = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -138,6 +140,17 @@ public class jFramePrincipal extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/key.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 80, -1, -1));
 
+        jLabelPagina.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabelPagina.setForeground(new java.awt.Color(0, 255, 255));
+        jLabelPagina.setText("Haga click aquí para dirigirte a la página web");
+        jLabelPagina.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabelPagina.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelPaginaMouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabelPagina, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 460, -1, -1));
+
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/athletics-wallpaper-203973.jpg"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, -20, 800, 510));
 
@@ -148,9 +161,9 @@ public class jFramePrincipal extends javax.swing.JFrame {
     private void jTextFieldUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldUserActionPerformed
 
     }//GEN-LAST:event_jTextFieldUserActionPerformed
-/**
- * Metodo para hacer transparente los botones de cerrar y minimizar.
- */
+    /**
+     * Metodo para hacer transparente los botones de cerrar y minimizar.
+     */
     public void transparenciaBoton() {
         jButtonCerrar.setOpaque(false);
         jButtonCerrar.setContentAreaFilled(false);
@@ -184,6 +197,19 @@ public class jFramePrincipal extends javax.swing.JFrame {
     private void jButtonMinimizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMinimizarActionPerformed
         this.setExtendedState(1);
     }//GEN-LAST:event_jButtonMinimizarActionPerformed
+
+    private void jLabelPaginaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelPaginaMouseClicked
+        try {
+            if (Desktop.isDesktopSupported()) {
+                Desktop desktop = Desktop.getDesktop();
+                if (desktop.isSupported(Desktop.Action.BROWSE)) {
+                    desktop.browse(new URI("http://www.atletismomontemayor.es/"));
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_jLabelPaginaMouseClicked
 
     /**
      * @param args the command line arguments
@@ -232,6 +258,7 @@ public class jFramePrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabelContraseña;
     private javax.swing.JLabel jLabelInicio;
+    private javax.swing.JLabel jLabelPagina;
     private javax.swing.JLabel jLabelRegistro;
     private javax.swing.JLabel jLabelUsuario;
     private javax.swing.JPasswordField jPasswordFieldPass;
