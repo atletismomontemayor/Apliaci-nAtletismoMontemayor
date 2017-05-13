@@ -26,15 +26,15 @@ public class C_MiMenuBar extends JMenuBar {
     //Constructor
     
     /**
-     * 
-     * @param ventana 
+     * Método para inicializar el método inicializar().
+     * @param ventana devuelve la ventana padre.
      */
     public C_MiMenuBar(JFrame ventana) {
         this.ventanaPadre = ventana;
         inicializar();
     }
 /**
- * 
+ * Método privado para inicializar y crear una barra de navegacion con las opciones de las diferentes ventanas que se han creado.
  */
     private void inicializar() {
 
@@ -76,8 +76,8 @@ public class C_MiMenuBar extends JMenuBar {
 
     }
 /**
- * 
- * @return 
+ * Getter de la barra de navegación.
+ * @return  this devuelve la misma barra de navegación.
  */
     public JMenuBar getBarraMenu() {
         return this;
@@ -85,8 +85,8 @@ public class C_MiMenuBar extends JMenuBar {
 
     //METODOS PARA LOS EVENTOS DE JMENU
     /**
-     * 
-     * @param evt 
+     * Método privado para detectar el click del raton a la hora de seleccionar la opción miPerfil y vuelves a la ventana miPerfil.
+     * @param evt parmámetro evt que detecta el click.
      */
     private void jMenuPerfilMouseClicked(java.awt.event.MouseEvent evt) {
         jFrameMiPerfil obj = new jFrameMiPerfil();
@@ -96,8 +96,8 @@ public class C_MiMenuBar extends JMenuBar {
 
     }
 /**
- * 
- * @param evt 
+ * Método privado para detectar el click del raton a la hora de seleccionar la opcion MisCarreras y vuelves a la ventana MisCarreras.
+ * @param evt parmámetro evt que detecta el click.
  */
     private void jMenuMCarreraMouseClicked(java.awt.event.MouseEvent evt) {
         jFrameMisCarreras obj = new jFrameMisCarreras();
@@ -106,8 +106,8 @@ public class C_MiMenuBar extends JMenuBar {
         ventanaPadre.dispose();
     }
 /**
- * 
- * @param evt 
+ * Método privado para detectar el click del raton a la hora de seleccionar la opcion Carreras y vuelves a la ventana Carreras.
+ * @param evt parmámetro evt que detecta el click.
  */
     private void jMenuCarrerasMouseClicked(java.awt.event.MouseEvent evt) {
         jFrameCarreras obj = new jFrameCarreras();
@@ -116,8 +116,8 @@ public class C_MiMenuBar extends JMenuBar {
         ventanaPadre.dispose();
     }
 /**
- * 
- * @param evt 
+ * Método privado para detectar el click del raton a la hora de seleccionar la opción Corredores y vuelves a la ventana Corredores.
+ * @param evt parmámetro evt que detecta el click.
  */
     private void jMenuCorredoresMouseClicked(java.awt.event.MouseEvent evt) {
         jFrameCorredores obj = new jFrameCorredores();
@@ -126,8 +126,8 @@ public class C_MiMenuBar extends JMenuBar {
         ventanaPadre.dispose();
     }
 /**
- * 
- * @param evt 
+ * Método privado para detectar el click del raton a la hora de seleccionar la opción Cerrar Sesion y te devuelve a la ventana principal.
+ * @param evt parmámetro evt que detecta el click.
  */
     private void jMenuCerrarSesionMouseClicked(java.awt.event.MouseEvent evt) {
         jFramePrincipal obj = new jFramePrincipal();

@@ -148,7 +148,9 @@ public class jFramePrincipal extends javax.swing.JFrame {
     private void jTextFieldUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldUserActionPerformed
 
     }//GEN-LAST:event_jTextFieldUserActionPerformed
-
+/**
+ * Metodo para hacer transparente los botones de cerrar y minimizar.
+ */
     public void transparenciaBoton() {
         jButtonCerrar.setOpaque(false);
         jButtonCerrar.setContentAreaFilled(false);
@@ -235,9 +237,5 @@ public class jFramePrincipal extends javax.swing.JFrame {
     private javax.swing.JPasswordField jPasswordFieldPass;
     private javax.swing.JTextField jTextFieldUser;
     // End of variables declaration//GEN-END:variables
-    /**
-     *
-     */
-    ConexionSQL cc = new ConexionSQL();
-    Connection con = cc.conectar();
+
 }

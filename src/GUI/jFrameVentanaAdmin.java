@@ -163,7 +163,10 @@ public class jFrameVentanaAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelUsu;
     // End of variables declaration//GEN-END:variables
-
+/**
+     * Getter del label Usuario.
+     * @return jLabelUsu devuelve el usuario conectado.
+     */
     public JLabel getjLabelUsu() {
         return jLabelUsu;
     }

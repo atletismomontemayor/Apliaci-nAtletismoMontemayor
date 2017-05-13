@@ -37,6 +37,9 @@ public class jFrameRegistrar extends javax.swing.JFrame {
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(jFrameRegistrar.class.getName()).log(Level.SEVERE, null, ex);
         }
+        /**
+         * Configurar tamaño de la ventana.
+         */
         this.setSize(701, 372);
         this.setResizable(false);
 
@@ -219,7 +222,9 @@ public class jFrameRegistrar extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+/**
+ * Metodo para hacer transparente los botones de cerrar y minimizar.
+ */
     public void transparenciaBoton() {
         jButtonCerrar.setOpaque(false);
         jButtonCerrar.setContentAreaFilled(false);
@@ -284,6 +289,9 @@ public class jFrameRegistrar extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldTlfnKeyTyped
 
     private void jTextFieldNacimientoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldNacimientoKeyTyped
+        /**
+         * Permitir solo 4 números.
+         */
         int caractermax = 4;
         if (jTextFieldNacimiento.getText().length() >= caractermax) {
             evt.consume();
@@ -298,6 +306,9 @@ public class jFrameRegistrar extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldNacimientoKeyTyped
 
     private void jTextFieldDNIKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldDNIKeyTyped
+        /**
+         * Permitir solo 9 dígitos.
+         */
         int caractermax = 9;
         if (jTextFieldNacimiento.getText().length() >= caractermax) {
             evt.consume();
@@ -365,72 +376,72 @@ public class jFrameRegistrar extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     /**
-     *
-     * @return
+     * Getter de la contraseña.
+     * @return jPasswordFieldPass devuelve la contraseña puesta.
      */
     public JPasswordField getjPasswordFieldPass() {
         return jPasswordFieldPass;
     }
 
     /**
-     *
-     * @return
+     * Getter del Apellido.
+     * @return jTextFieldApellido devuelve el apellido.
      */
     public JTextField getjTextFieldApellido() {
         return jTextFieldApellido;
     }
 
     /**
-     *
-     * @return
+     * Getter de la Cuenta.
+     * @return jTextFieldCuenta devuelve la cuenta.
      */
     public JTextField getjTextFieldCuenta() {
         return jTextFieldCuenta;
     }
 
     /**
-     *
-     * @return
+     * Getter del DNI.
+     * @return jTextFieldDNI devuelve el DNI.
      */
     public JTextField getjTextFieldDNI() {
         return jTextFieldDNI;
     }
 
     /**
-     *
-     * @return
+     * Getter de la fecha de nacimiento
+     * @return jTextFieldNacimiento devuelve la fecha de nacimiento.
      */
     public JTextField getjTextFieldNacimiento() {
         return jTextFieldNacimiento;
     }
 
     /**
-     *
-     * @return
+     * Getter del nombre de usuario.
+     * @return jTextFieldNomUser devuelve el nombre de usuario.
      */
     public JTextField getjTextFieldNomUser() {
         return jTextFieldNomUser;
     }
 
     /**
-     *
-     * @return
+     * Getter del nombre.
+     * @return jTextFieldNombre devuelve el nombre.
      */
     public JTextField getjTextFieldNombre() {
         return jTextFieldNombre;
     }
 
     /**
-     *
-     * @return
+     * Getter del teléfono.
+     * @return jTextFieldTlfn devuelve el teléfono.
      */
     public JTextField getjTextFieldTlfn() {
         return jTextFieldTlfn;
     }
 
     /**
-     *
-     * @return
+     * Getter del grupo de sexo.
+     * @return buttonGroupSexo devuelve el grupo de sexo si es hombre o mujer.
      */
     public ButtonGroup getButtonGroupSexo() {
         return buttonGroupSexo;

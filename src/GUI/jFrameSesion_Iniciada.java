@@ -18,6 +18,9 @@ public class jFrameSesion_Iniciada extends javax.swing.JFrame {
      */
     public jFrameSesion_Iniciada() {
         initComponents();
+        /**
+         * Configurar tamaño de la ventana.
+         */
         this.setSize(402, 298);
         this.setResizable(false);
     }
@@ -44,7 +47,6 @@ public class jFrameSesion_Iniciada extends javax.swing.JFrame {
         setTitle("Sesion Iniciada");
         setMaximumSize(new java.awt.Dimension(402, 298));
         setMinimumSize(new java.awt.Dimension(402, 298));
-        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelUsu.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -61,7 +63,7 @@ public class jFrameSesion_Iniciada extends javax.swing.JFrame {
                 jButtonMiPerfilActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonMiPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 30, 97, -1));
+        getContentPane().add(jButtonMiPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 30, 120, -1));
 
         jButtonMCarreras.setText("Mis carreras");
         jButtonMCarreras.addActionListener(new java.awt.event.ActionListener() {
@@ -69,7 +71,7 @@ public class jFrameSesion_Iniciada extends javax.swing.JFrame {
                 jButtonMCarrerasActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonMCarreras, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, 97, -1));
+        getContentPane().add(jButtonMCarreras, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, 120, -1));
 
         jButtonCarreras.setText("Carreras");
         jButtonCarreras.setMaximumSize(new java.awt.Dimension(91, 23));
@@ -80,7 +82,7 @@ public class jFrameSesion_Iniciada extends javax.swing.JFrame {
                 jButtonCarrerasActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonCarreras, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 100, -1));
+        getContentPane().add(jButtonCarreras, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 120, -1));
 
         jButtonCorredores.setText("Corredores");
         jButtonCorredores.addActionListener(new java.awt.event.ActionListener() {
@@ -88,7 +90,7 @@ public class jFrameSesion_Iniciada extends javax.swing.JFrame {
                 jButtonCorredoresActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonCorredores, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 100, -1));
+        getContentPane().add(jButtonCorredores, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 120, -1));
 
         jButtonCerrarSesion.setText("Cerrar sesión");
         jButtonCerrarSesion.addActionListener(new java.awt.event.ActionListener() {
@@ -96,7 +98,7 @@ public class jFrameSesion_Iniciada extends javax.swing.JFrame {
                 jButtonCerrarSesionActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 100, -1));
+        getContentPane().add(jButtonCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 120, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logo-atletismo3.jpg"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -181,9 +183,9 @@ public class jFrameSesion_Iniciada extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelUsu;
     // End of variables declaration//GEN-END:variables
-/**
-     *
-     * @return
+       /**
+     * Getter del label Usuario
+     * @return jLabelUsu devuelve el usuario conectado.
      */
     public JLabel getjLabelUsu() {
         return jLabelUsu;
