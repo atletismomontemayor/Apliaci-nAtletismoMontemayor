@@ -23,8 +23,8 @@ public class jFrameMiPerfil extends javax.swing.JFrame {
     /**
      * Creates new form MiPerfil
      */
-
     public jFrameMiPerfil() {
+        //Añadir la barra de navegación.
         this.add(barra);
         initComponents();
         C_MiMenuBar menu = new C_MiMenuBar(this);
@@ -36,6 +36,7 @@ public class jFrameMiPerfil extends javax.swing.JFrame {
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(jFrameMiPerfil.class.getName()).log(Level.SEVERE, null, ex);
         }
+        //Configuración del tamaño de la ventana.
         this.setSize(400, 320);
         this.setResizable(false);
 
@@ -180,46 +181,46 @@ public class jFrameMiPerfil extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldUsuario;
     // End of variables declaration//GEN-END:variables
    /**
-     *
+     * Conxión con la barra de navegación.
      */
 
     C_MiMenuBar barra = new C_MiMenuBar(this);
 
     /**
-     *
-     * @return
+     * Getter del apellido.
+     * @return jTextFieldApellidos devuelve el apellido.
      */
     public JTextField getjTextFieldApellidos() {
         return jTextFieldApellidos;
     }
 
     /**
-     *
-     * @return
+     * Getter de las carreras realizadas.
+     * @return jTextFieldCarrerasRealizadas devuelve las carreras realizadas.
      */
     public JTextField getjTextFieldCarrerasRealizadas() {
         return jTextFieldCarrerasRealizadas;
     }
 
     /**
-     *
-     * @return
+     * Getter de la categoria.
+     * @return jTextFieldCategoria devuelve la categoria.
      */
     public JTextField getjTextFieldCategoria() {
         return jTextFieldCategoria;
     }
 
     /**
-     *
-     * @return
+     * Getter del nombre.
+     * @return jTextFieldNombre devuelve el nombre.
      */
     public JTextField getjTextFieldNombre() {
         return jTextFieldNombre;
     }
 
     /**
-     *
-     * @return
+     * Getter del usuario.
+     * @return jTextFieldUsuario devuelve el usuario.
      */
     public JTextField getjTextFieldUsuario() {
         return jTextFieldUsuario;

@@ -11,28 +11,12 @@ public class respositorio {
     private jFrameMiPerfil ventanaPerfil;
     private ResultSet resultado;
 
-    public void SolicitarUsuario() {
-        // TODO - implement respositorio.SolicitarUsuario
-        throw new UnsupportedOperationException();
-    }
-
-    public void SolicitarContrasenya() {
-        // TODO - implement respositorio.SolicitarContrasenya
-        throw new UnsupportedOperationException();
-    }
-
-    public void solicitadOpcion() {
-        // TODO - implement respositorio.solicitadOpcion
-        throw new UnsupportedOperationException();
-    }
-
     /**
-     *
-     * @param dni
+     * Método para mostrar el perfil del usuario que esta conectado. Es decir muestra el usuario, el nombre, el apellido, las carreras realizadas y las categorias.
+     * @param dni parámetro dni que guarda el usuario conectado.
      */
 
     public void mostrarInfoUsuario(String dni) {
-        // TODO - implement respositorio. mostrarInfoUsuario
         Modelo.ConexionSQL con = new ConexionSQL();
         Connection cn = con.conectar();
         try {
@@ -57,15 +41,15 @@ public class respositorio {
     }
 
     /**
-     *
-     * @param nombre
-     * @param apellidos
-     * @param nombreusuario
-     * @param contrasenya
-     * @param dni
-     * @param telefono
-     * @param anyonacimiento
-     * @param numerocuenta
+     * Metodo para registrar un usuario en la base de datos.
+     * @param nombre parámetro nombre que guarda el nombre del usuario que se quiere registrar.
+     * @param apellidos parámetro apellidos que guarda el apellido del usuario que se quiere registrar.
+     * @param nombreusuario parámetro nombreusuario que guarda el nombre de usuario.
+     * @param contrasenya parámetro contraseña que guarda la contraseña del usuario que se quiere registrar.
+     * @param dni parámetro dni que guarda el DNI del usuario que se quiere registrar.
+     * @param telefono parámetro teléfono que guarda el teléfono del usuario que se quiere registrar.
+     * @param anyonacimiento parámetro anyonacimiento que guarda el año de naicmiento del usuario que se quiere registrar.
+     * @param numerocuenta parámetro numerocuenta  que guarda el numero de cuenta del usuario que se quiere registrar.
      */
 
     public void RegistrarCorredor(String nombre, String apellidos, String nombreusuario, String contrasenya, String dni, String telefono, String anyonacimiento, String numerocuenta) {

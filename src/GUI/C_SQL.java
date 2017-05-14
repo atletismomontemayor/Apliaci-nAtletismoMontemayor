@@ -30,8 +30,10 @@ public class C_SQL {
 
     /**
      * Método para conectar la ventana principal con la base de datos.
+     *
      * @param p parámetro de la ventana principal.
-     * @throws ClassNotFoundException muestra un error si no se conecta a la base de datos.
+     * @throws ClassNotFoundException muestra un error si no se conecta a la
+     * base de datos.
      */
     public C_SQL(jFramePrincipal p) throws ClassNotFoundException {
         try {
@@ -44,8 +46,10 @@ public class C_SQL {
 
     /**
      * Método para conectar la ventana de carreras con la base de datos.
+     *
      * @param c parámetro de la ventana carreras.
-     * @throws ClassNotFoundException muestra un error si no se conecta a la base de datos.
+     * @throws ClassNotFoundException muestra un error si no se conecta a la
+     * base de datos.
      */
     public C_SQL(jFrameCarreras c) throws ClassNotFoundException {
         try {
@@ -58,8 +62,10 @@ public class C_SQL {
 
     /**
      * Método para conectar la ventana MiPerfil con la base de datos.
+     *
      * @param mp parámetro de la ventana miPerfil
-     * @throws ClassNotFoundException muestra un error si no se conecta con la base de datos.
+     * @throws ClassNotFoundException muestra un error si no se conecta con la
+     * base de datos.
      */
     public C_SQL(jFrameMiPerfil mp) throws ClassNotFoundException {
         try {
@@ -72,8 +78,10 @@ public class C_SQL {
 
     /**
      * Método para conectar la ventan Corredores con la base de datos.
+     *
      * @param co parámetro de la ventana Corredores.
-     * @throws ClassNotFoundException muestra un error si no se conecta con la base de datos.
+     * @throws ClassNotFoundException muestra un error si no se conecta con la
+     * base de datos.
      */
     public C_SQL(jFrameCorredores co) throws ClassNotFoundException {
         try {
@@ -86,8 +94,10 @@ public class C_SQL {
 
     /**
      * Método para conectar la ventana Registrar con la base de datos.
+     *
      * @param re parámetro de la ventana Registrar.
-     * @throws ClassNotFoundException muestra un error si no se conecta con la base de datos.
+     * @throws ClassNotFoundException muestra un error si no se conecta con la
+     * base de datos.
      */
     public C_SQL(jFrameRegistrar re) throws ClassNotFoundException {
         try {
@@ -102,10 +112,15 @@ public class C_SQL {
      * METODOS DE LA CLASE CONTROLADOR
      */
     /**
-     * Método para comprobar si hay un usuario en la base de datos a la hora de hacer login en el programa.
-     * @param usuario parámetro usuario donde se guarda el usuario desde la base de datos.
-     * @param pwd parámetro contraseña donde se guarda la contraseña desde la base de datos.
-     * @return success devuelve si se ha encontrado lo solicitado con la base de datos.
+     * Método para comprobar si hay un usuario en la base de datos a la hora de
+     * hacer login en el programa.
+     *
+     * @param usuario parámetro usuario donde se guarda el usuario desde la base
+     * de datos.
+     * @param pwd parámetro contraseña donde se guarda la contraseña desde la
+     * base de datos.
+     * @return success devuelve si se ha encontrado lo solicitado con la base de
+     * datos.
      */
     public boolean comprobarUsuario(String usuario, String pwd) {
         boolean success = false;
@@ -150,8 +165,10 @@ public class C_SQL {
     }
 
     /**
-     *  Método para mostrar las carreras de la base de datos en la tabla.
-     * @return success devuelve si se ha encontrado lo solicitado con la base de datos.
+     * Método para mostrar las carreras de la base de datos en la tabla.
+     *
+     * @return success devuelve si se ha encontrado lo solicitado con la base de
+     * datos.
      */
     public boolean mostrarCarreras() {
         boolean success = false;
@@ -194,7 +211,9 @@ public class C_SQL {
 
     /**
      * Método para mostrar los corredores de la base de datos en la tabla.
-     * @return success devuelve si se ha encontrado lo solicitado con la base de datos.
+     *
+     * @return success devuelve si se ha encontrado lo solicitado con la base de
+     * datos.
      */
     public boolean mostrarCorredores() {
         boolean success = false;
@@ -233,7 +252,8 @@ public class C_SQL {
     }
 
     /**
-     * Método guardar registro donde se guarda en la base de datos los datos a la hora de registrarse en la aplicación.
+     * Método guardar registro donde se guarda en la base de datos los datos a
+     * la hora de registrarse en la aplicación.
      */
     public void guardarRegistro() {
 
@@ -252,7 +272,8 @@ public class C_SQL {
 
     /**
      * Método para obtener los datos de la base de datos del usuario conectado.
-     * @param dni
+     *
+     * @param dni parámetro dni donde esta guardado el usuario conectado.
      */
     public void obtenerPerfil(String dni) {
         Modelo.respositorio miRepo = new respositorio();
