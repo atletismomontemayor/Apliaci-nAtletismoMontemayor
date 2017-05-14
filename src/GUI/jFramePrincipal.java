@@ -105,7 +105,7 @@ public class jFramePrincipal extends javax.swing.JFrame {
 
         jLabelRegistro.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabelRegistro.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelRegistro.setText("Si no tienes una cuenta pulse aquí:");
+        jLabelRegistro.setText("¿No tienes una cuenta? Regístrate");
         getContentPane().add(jLabelRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 390, -1, -1));
 
         jButtonRegistrar.setBackground(new java.awt.Color(102, 102, 102));
@@ -199,6 +199,9 @@ public class jFramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonMinimizarActionPerformed
 
     private void jLabelPaginaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelPaginaMouseClicked
+       /**
+        * Dirigir un label a la página web del club.
+        */
         try {
             if (Desktop.isDesktopSupported()) {
                 Desktop desktop = Desktop.getDesktop();

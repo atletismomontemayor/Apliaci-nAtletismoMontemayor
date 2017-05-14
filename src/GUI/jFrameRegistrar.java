@@ -79,6 +79,7 @@ public class jFrameRegistrar extends javax.swing.JFrame {
         jPasswordFieldPass = new javax.swing.JPasswordField();
         jButtonCerrar = new javax.swing.JButton();
         jButtonMinimizar = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Registrar");
@@ -219,6 +220,9 @@ public class jFrameRegistrar extends javax.swing.JFrame {
         });
         getContentPane().add(jButtonMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 0, 20, 20));
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo-azul,-lineas-206492.jpg"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 840, 460));
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -353,6 +357,7 @@ public class jFrameRegistrar extends javax.swing.JFrame {
     private javax.swing.JButton jButtonBorrar;
     private javax.swing.JButton jButtonCerrar;
     private javax.swing.JButton jButtonMinimizar;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabelApellidos;

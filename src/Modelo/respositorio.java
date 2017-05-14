@@ -46,7 +46,6 @@ public class respositorio {
                 ventanaPerfil.getjTextFieldCarrerasRealizadas().setText(resultado.getString(4));
                 ventanaPerfil.getjTextFieldCategoria().setText(resultado.getString(5));
             }
-            pps.executeUpdate();
         } catch (SQLException ex) {
             System.out.println(ex);
         }

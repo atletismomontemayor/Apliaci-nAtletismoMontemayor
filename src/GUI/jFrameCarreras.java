@@ -34,6 +34,11 @@ public class jFrameCarreras extends javax.swing.JFrame {
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(jFrameCarreras.class.getName()).log(Level.SEVERE, null, ex);
         }
+        this.setSize(702, 297);
+        this.setResizable(false);
+        jTableInscripcion.setOpaque(false);
+        jScrollPane1.setOpaque(false);
+        jScrollPane1.getViewport().setOpaque(false);
     }
 
     /**
@@ -48,9 +53,13 @@ public class jFrameCarreras extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableInscripcion = new javax.swing.JTable();
         jButtonParticipar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lista de Carreras");
+        setMaximumSize(new java.awt.Dimension(702, 297));
+        setMinimumSize(new java.awt.Dimension(702, 297));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTableInscripcion.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -68,9 +77,10 @@ public class jFrameCarreras extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jTableInscripcion.setColumnSelectionAllowed(false);
         jTableInscripcion.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
         jScrollPane1.setViewportView(jTableInscripcion);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 682, 184));
 
         jButtonParticipar.setText("Participar");
         jButtonParticipar.addActionListener(new java.awt.event.ActionListener() {
@@ -78,29 +88,10 @@ public class jFrameCarreras extends javax.swing.JFrame {
                 jButtonParticiparActionPerformed(evt);
             }
         });
+        getContentPane().add(jButtonParticipar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 682, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(jButtonParticipar)
-                .addGap(22, 587, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(jButtonParticipar)
-                .addContainerGap(39, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/pista-atletismo-superilla-poblenou-1490348978584.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -110,8 +101,8 @@ public class jFrameCarreras extends javax.swing.JFrame {
           if(jTableInscripcion.getSelectedRow() < 0)
             JOptionPane.showMessageDialog(this, "No hay ninguna fila seleccionada", "Error", JOptionPane.ERROR_MESSAGE);
         else{
-              JOptionPane.showConfirmDialog(this, "¿Participarás en la carrera seleccionada?");
-        }
+             JOptionPane.showConfirmDialog(this, "¿Desea pagar la inscripción para participar en esta carrera?", "Confirmar participación", JOptionPane.INFORMATION_MESSAGE);
+           }
     }//GEN-LAST:event_jButtonParticiparActionPerformed
 
     /**
@@ -120,6 +111,7 @@ public class jFrameCarreras extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonParticipar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTableInscripcion;
     // End of variables declaration//GEN-END:variables

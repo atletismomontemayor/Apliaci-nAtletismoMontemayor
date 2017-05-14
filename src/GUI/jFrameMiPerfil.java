@@ -32,9 +32,12 @@ public class jFrameMiPerfil extends javax.swing.JFrame {
         C_SQL controladorSQL;
         try {
             controladorSQL = new C_SQL(this);
+            //controladorSQL.obtenerPerfil(dni);
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(jFrameMiPerfil.class.getName()).log(Level.SEVERE, null, ex);
         }
+        this.setSize(400, 320);
+        this.setResizable(false);
 
     }
 

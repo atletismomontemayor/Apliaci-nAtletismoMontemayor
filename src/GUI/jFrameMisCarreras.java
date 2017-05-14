@@ -19,6 +19,8 @@ public class jFrameMisCarreras extends javax.swing.JFrame {
         initComponents();
         C_MiMenuBar menu = new C_MiMenuBar(this);
         this.setJMenuBar(menu.getBarraMenu());
+        this.setSize(400, 420);
+        this.setResizable(false);
     }
 
     /**
