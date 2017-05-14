@@ -115,11 +115,12 @@ public class jFrameCarreras extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTableInscripcion;
     // End of variables declaration//GEN-END:variables
-   C_MiMenuBar barra = new C_MiMenuBar(this);
+   //conexión con la barra de navegación.
+    C_MiMenuBar barra = new C_MiMenuBar(this);
 
     /**
-     *
-     * @return
+     * Getter de la tabla
+     * @return jTableInscripcion devuelve la tabla de al inscripción.
      */
     public JTable getjTableInscripcion() {
         return jTableInscripcion;

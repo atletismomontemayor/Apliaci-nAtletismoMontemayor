@@ -117,7 +117,9 @@ public class jFrameVentanaAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonGestionarCarrerasActionPerformed
 
     private void jButtonGestionPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGestionPActionPerformed
-
+        jFrameCorredores cor = new jFrameCorredores();
+        cor.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButtonGestionPActionPerformed
 
     /**
